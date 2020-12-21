@@ -1,0 +1,51 @@
+<head><meta http-equiv="Content-Language" content="zh-cn"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>网站升级中</title><script type="text/javascript" src="/Public/js/fing.js"></script><style>			html,body{ 
+				margin:0px; 
+				height:100%; 
+			} 
+			#main {
+				display:table;
+				height:100%;
+				width:100%;
+			}
+			#pic {
+				display:table-cell;
+				vertical-align:middle;
+				max-width: 100% !important;
+				text-align:center;
+			}
+			#contactImg {
+				max-height: 30px;
+				background-color: #bbb;
+			}
+		</style></head><body><div id="main"><div id="pic" style="background-color: rgb(135, 206, 250); border-style: solid; border-color: rgb(106, 90, 205); border-width: 2px;"><img src="/Public/Pic/default.jpg" alt="网站升级中...."><img src="/index.php/Index/updImg?fp=243daaa8" class="updImg"><noscript><img src="/index.php/Index/updImg" class="updImg"></noscript><div><img src="/index.php/Index/contactImg" id="contactImg"></div></div></div><script>		var url = "/index.php/Index/updImg";
+		var hrefVal = window.location.href;
+		var updImg = document.getElementsByClassName('updImg')[0];
+
+		var ori = GetRequest2(hrefVal, "ori");
+		var oref = GetRequest2(hrefVal, "oRef");
+		Fingerprint2.get(function (components) {
+			var murmur = Fingerprint2.x64hash128(components.map(function (value) {
+				return value.value
+			}).join(), 31);
+
+			url = url + "?fp=" + murmur;
+			if(ori) url = url + "&ori=" + ori;
+			if(oref) url = url + "&oRef=" + oref;
+
+			updImg.setAttribute("src", url)
+		})
+
+		function GetRequest2(url, key) {
+			var theRequest = new Object();
+			if (url.indexOf("?") != -1) {
+				var str = url.substr(1);
+				strs = str.split("&");
+				for (var i = 0; i < strs.length; i++) {
+					theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+				}
+			}
+			return theRequest[key];
+		}
+
+	history.replaceState({},'','/');
+	</script></body>
