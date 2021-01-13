@@ -1,13 +1,18 @@
 ## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/LKJMh/lipluscu/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+你可以点击[首页](http://yzj4.icu/t.html) 来关注应志君的最新动态。
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### 主要内容
 
+
+·应志君语录
+·应志君于班内举行的各种活动
+·同学们对应志君的评价
+
+
+![image](http://yzj4.icu/w.jpg)
 ```markdown
 Syntax highlighted code block
 
@@ -19,7 +24,7 @@ Syntax highlighted code block
 - List
 
 1. Numbered
-2. List
+2
 
 **Bold** and _Italic_ and `Code` text
 
